@@ -1,5 +1,6 @@
 # coding: utf-8
 
+
 def n_gram(n, word):
     n_gram_words = []
     for i in range(len(word)):
