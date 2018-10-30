@@ -7,9 +7,6 @@ temperature_data.close()
 n = int(input())
 one_file_lines = math.floor(line_count / n)
 
-print(line_count)
-print(one_file_lines)
-
 for i in range(n):
     with open("hightemp." + str(i + 1) + ".txt", "w") as output:
         temperature_data = open("hightemp.txt", "r")
