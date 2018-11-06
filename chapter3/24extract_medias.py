@@ -7,6 +7,6 @@ for wiki_line in wiki_json:
     wiki_info = json.loads(wiki_line)
     wiki_texts = wiki_info['text'].split("\n")
     for wiki_text in wiki_texts:
-        ref_url = re.search("(?=.*<ref>)\w+://\S+(?=</ref>)", wiki_text)
-        if ref_url is not None:
-            print(ref_url.group(0))
+        ref_url = re.findall("(?<=<ref>)\w+://[\w|\/|\?|\&|\.|_|-|=|%|\'|!|#]+(?=</ref>)", wiki_text)
+        if len(ref_url) > 0:
+            print(ref_url)
