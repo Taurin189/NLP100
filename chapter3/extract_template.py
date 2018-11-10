@@ -26,7 +26,5 @@ def get_country_information(json_obj):
                 value = re.search("(?<==)(\s+)?.+", wiki_text)
                 if key is not None and value is not None:
                     tmp_dict.update({key.group(0).replace(" ", ""): value.group(0)})
-        output.update({count: tmp_dict})
-        count += 1
     return output
 
