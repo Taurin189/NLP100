@@ -30,8 +30,3 @@ def get_country_information(json_obj):
         count += 1
     return output
 
-
-wiki_json = open("jawiki-country.json", "r")
-output = get_country_information(wiki_json)
-print(output)
-
