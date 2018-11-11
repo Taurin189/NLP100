@@ -9,5 +9,7 @@ def delete_emphasize_markup(text):
 
 
 def delete_inner_link(text):
-    text = re.sub(r'\[\[[^\]]+\|([^(\]\])]+)\]\]|\[\[([^(\]\])]+)\]\]', r'\1\2', text)
+    text = re.sub(r'\[\[[^\]]+\|([^(\])]+)\]\]|\[\[([^(\])]+)\]\]', r'\1\2', text)
+    text = re.sub(r'\[\[([^\]]+)\]\]', r'\1', text)
+    text = re.sub(r'\[\[(.+)\]\]', r'\1', text)
     return text
