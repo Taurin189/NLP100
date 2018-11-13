@@ -1,8 +1,8 @@
 # NLP100
 http://www.cl.ecei.tohoku.ac.jp/nlp100/
 
-# Progress
-## chapter1
+## Progress
+### chapter1
 |problem name|is solved?|
 |:-----------|:------------:|
 |00reverse_setring|○|
@@ -15,7 +15,7 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |07template_text|○|
 |08typoglycemia|○|
 
-## chapter2
+### chapter2
 |problem name|is solved?|
 |:-----------|:------------:|
 |10count_line|○|
@@ -29,7 +29,7 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |18sort_3col|○|
 |19count_same_words|○|
 
-## chapter3
+### chapter3
 |problem name|is solved?|note|
 |:-----------|:------------:|:------------:|
 |20read_json|○||
@@ -42,3 +42,4 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |27delete_inner_link|△|could not delete several markups|
 |28delete_mediawiki_markup|△|because of 26 and 27 problems|
 |29extract_country_flag_url|-|not yet|
+
