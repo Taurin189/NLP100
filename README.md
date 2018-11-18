@@ -43,3 +43,8 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |28delete_mediawiki_markup|△|because of 26 and 27 problems|
 |29extract_country_flag_url|-|not yet|
 
+### chapter3
+|problem name|is solved?|note|
+|:-----------|:------------:|:------------:|
+|create_mecab_file|○|Use Ochasen mode|
+|30load_mecab_data|-|not yet|
