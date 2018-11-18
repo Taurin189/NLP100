@@ -1,7 +1,7 @@
 # coding: utf-8
 import MeCab
 
-m = MeCab.Tagger ("mecabrc")
+m = MeCab.Tagger("-Ochasen")
 original_text_file = open("neko.txt", "r")
 original_text = ""
 for line in original_text_file:
