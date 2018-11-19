@@ -1,11 +1,9 @@
 # coding: utf-8
 import re
+from chapter4 import converted_dict
 
-mecab_file = open("neko.txt.mecab", "r")
-categorized_words = []
+categorized_words = converted_dict.get_dict("neko.txt.mecab")
 
-for word_line in mecab_file:
-    char = word_line.split("\t")
-    if len(char) >= 4:
-        if re.match("名詞-サ変接続", char[3]) is not None:
-            print(char[2])
+for line in categorized_words:
+    if re.match("名詞-サ変接続", line["pos1"]) is not None:
+        print(line["pos"])
