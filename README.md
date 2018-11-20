@@ -43,8 +43,12 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |28delete_mediawiki_markup|△|because of 26 and 27 problems|
 |29extract_country_flag_url|-|not yet|
 
-### chapter3
+### chapter4
 |problem name|is solved?|note|
 |:-----------|:------------:|:------------:|
 |create_mecab_file|○|Use Ochasen mode|
-|30load_mecab_data|-|not yet|
+|30load_mecab_data|○||
+|31extract_surface_verb|○||
+|32extract_verb|○||
+|33extract_strange_noun|○|not yet|
+|34extract_word_combined_with_particles|△|The speed is very slow|
