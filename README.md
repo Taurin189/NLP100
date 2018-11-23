@@ -50,5 +50,5 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |30load_mecab_data|○||
 |31extract_surface_verb|○||
 |32extract_verb|○||
-|33extract_strange_noun|○|not yet|
-|34extract_word_combined_with_particles|△|The speed is very slow|
+|33extract_strange_noun|○||
+|34extract_word_combined_with_particles|○||

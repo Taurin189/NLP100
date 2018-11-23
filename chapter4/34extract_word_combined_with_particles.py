@@ -1,21 +1,14 @@
 # coding: utf-8
 import re
 import time
-from chapter4 import converted_dict
+from chapter4 import dict_utils
 
 time_start = time.time()
-categorized_words = converted_dict.get_dict("neko.txt.mecab")
-noun_list = []
+categorized_words = dict_utils.get_dict("neko.txt.mecab")
 combined_words_list = []
-max_len_of_pos = 0
+noun_list = dict_utils.get_uniq_noun_list(categorized_words)
+max_len_of_pos = dict_utils.get_max_len_of_noun(noun_list)
 
-for line in categorized_words:
-    if re.match("名詞", line["pos1"]) is not None:
-        noun_list.append(line["pos"])
-        if len(line["pos"]) > max_len_of_pos:
-            max_len_of_pos = len(line["pos"])
-
-noun_list = list(set(noun_list))
 original_text_file = open("neko.txt", "r")
 for line in original_text_file.readlines():
     is_in_list = False
