@@ -10,9 +10,13 @@ for line in categorized_words:
         noun_list.append(line["pos"])
 
 noun_list = list(set(noun_list))
-
+count = 1
 original_text_file = open("neko.txt", "r")
 for line in original_text_file.readlines():
+    print("line:" + str(count))
+    count += 1
+    if line.find("の") < 0:
+        continue
     for first_noun in noun_list:
         first_noun = re.sub(r'(\\|\*|\+|\.|\?|\{|\}|\(|\)|\[|\]|\^|\$|\-|\||\/)', r'\\\1', first_noun)
         search_result = re.search(first_noun + "の", line)
