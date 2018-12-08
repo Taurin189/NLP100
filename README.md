@@ -52,3 +52,11 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |32extract_verb|○||
 |33extract_strange_noun|○||
 |34extract_word_combined_with_particles|○||
+
+
+### chapter5
+How to install mecab and Cabocha
+https://qiita.com/musaprg/items/9a572ad5c4e28f79d2ae
+
+エラー対応
+https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
