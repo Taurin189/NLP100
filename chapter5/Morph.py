@@ -7,3 +7,6 @@ class Morph:
         self.base = base
         self.pos = pos
         self.pos1 = pos1
+
+    def to_list(self):
+        return [self.surface, self.base, self.pos, self.pos1]
