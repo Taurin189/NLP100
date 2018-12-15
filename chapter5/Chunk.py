@@ -6,7 +6,7 @@ class Chunk:
         self.morph_list = []
         self.morph_list_list = []
         self.num = 0
-        self.dst = ""
+        self.dst = 0
         self.srcs_list = []
 
     def get_num(self):

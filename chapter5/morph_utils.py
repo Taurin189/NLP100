@@ -45,9 +45,9 @@ def get_chunk_list(file_name, num):
                 chunk_list.append(tmp_chunk)
             tmp_chunk = Chunk()
             tmp_chunk.set_num(word_analysis[1])
-            tmp_chunk.set_dst(word_analysis[2])
+            tmp_chunk.set_dst(word_analysis[2][:-1])
             for chunk in chunk_list:
-                if word_analysis[1] == chunk.get_dst()[:-1]:
+                if word_analysis[1] == chunk.get_dst():
                     tmp_chunk.append_srcs(chunk.get_num())
         elif len(word_analysis) > 8:
             tmp_morph = Morph(surface=word_analysis[0], base=word_analysis[7], pos=word_analysis[1],
