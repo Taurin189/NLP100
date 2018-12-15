@@ -2,18 +2,6 @@
 from chapter5.Morph import Morph
 from chapter5.Chunk import Chunk
 
-def get_morph_list(file_name):
-    morph_list = []
-    morph_file = open(file_name, "r")
-    for word_line in morph_file:
-        word_line = word_line.replace("\t", ",")
-        word_analysis = word_line.split(",")
-        if len(word_analysis) < 9:
-            continue
-        tmp_morph = Morph(surface=word_analysis[0], base=word_analysis[7], pos=word_analysis[1], pos1=word_analysis[2])
-        morph_list.append(tmp_morph)
-    return morph_list
-
 
 def get_sentence_lines_by_num(file_name, num):
     sentence_lines = []
@@ -27,6 +15,19 @@ def get_sentence_lines_by_num(file_name, num):
         if word_line.startswith("。"):
             marks_count += 1
     return sentence_lines
+
+
+def get_morph_list(file_name, num):
+    morph_list = []
+    morph_file = get_sentence_lines_by_num(file_name, num)
+    for word_line in morph_file:
+        word_line = word_line.replace("\t", ",")
+        word_analysis = word_line.split(",")
+        if len(word_analysis) < 9:
+            continue
+        tmp_morph = Morph(surface=word_analysis[0], base=word_analysis[7], pos=word_analysis[1], pos1=word_analysis[2])
+        morph_list.append(tmp_morph)
+    return morph_list
 
 
 def get_chunk_list(file_name, num):
