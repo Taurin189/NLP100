@@ -15,6 +15,9 @@ class Chunk:
     def set_num(self, num):
         self.num = num
 
+    def get_morph_list(self):
+        return self.morph_list
+
     def append_morph_list(self, morph):
         self.morph_list.append(morph)
 
