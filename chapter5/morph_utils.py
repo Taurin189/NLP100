@@ -65,3 +65,17 @@ def get_chunk_dict(file_name, num):
     for chunk in chunk_list:
         chunk_dict.update({chunk.get_num(): chunk})
     return chunk_dict
+
+
+def get_chunk_text(text, chunk, file_name, num):
+    chunk_dict = get_chunk_dict(file_name, num)
+    for morph in chunk.get_morph_list():
+        text += morph.surface
+    if chunk.get_dst() == -1:
+        return text
+    if chunk.get_dst() not in chunk_dict.keys():
+        return text
+    text += "\t"
+    next_chunk = chunk_dict[chunk.get_dst()]
+    text = get_chunk_text(text, next_chunk, file_name, num)
+    return text
