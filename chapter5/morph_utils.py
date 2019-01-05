@@ -57,3 +57,11 @@ def get_chunk_list(file_name, num):
     if tmp_chunk is not None:
         chunk_list.append(tmp_chunk)
     return chunk_list
+
+
+def get_chunk_dict(file_name, num):
+    chunk_list = get_chunk_list(file_name, num)
+    chunk_dict = {}
+    for chunk in chunk_list:
+        chunk_dict.update({chunk.get_num(): chunk})
+    return chunk_dict

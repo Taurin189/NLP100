@@ -24,6 +24,9 @@ class Chunk:
     def append_morph_list_list(self, morph):
         self.morph_list_list.append(morph.to_list())
 
+    def get_morph_list_list(self):
+        return self.morph_list_list
+
     def get_dst(self):
         return self.dst
 
