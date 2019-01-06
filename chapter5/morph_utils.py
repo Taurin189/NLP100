@@ -79,3 +79,35 @@ def get_chunk_text(text, chunk, file_name, num):
     next_chunk = chunk_dict[chunk.get_dst()]
     text = get_chunk_text(text, next_chunk, file_name, num)
     return text
+
+
+def get_chunk_text_by_chunk_dict(text, chunk, chunk_dict):
+    for morph in chunk.get_morph_list():
+        text += morph.surface
+    if chunk.get_dst() == -1:
+        return text
+    if chunk.get_dst() not in chunk_dict.keys():
+        return text
+    text += "\t"
+    next_chunk = chunk_dict[chunk.get_dst()]
+    text = get_chunk_text_by_chunk_dict(text, next_chunk, chunk_dict)
+    return text
+
+
+def get_chunk_text_by_chunk_dict_till_verb(text, chunk, chunk_dict):
+    for morph in chunk.get_morph_list():
+        if morph.pos1 == '句点':
+            return text
+        if morph.pos == '動詞':
+            text += morph.surface
+            return text
+        text += morph.surface
+    if chunk.get_dst() == -1:
+        return text
+    if chunk.get_dst() not in chunk_dict.keys():
+        return text
+    text += "\t"
+    next_chunk = chunk_dict[chunk.get_dst()]
+    text = get_chunk_text_by_chunk_dict_till_verb(text, next_chunk, chunk_dict)
+    return text
+
