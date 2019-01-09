@@ -52,7 +52,11 @@ http://www.cl.ecei.tohoku.ac.jp/nlp100/
 |32extract_verb|○||
 |33extract_strange_noun|○||
 |34extract_word_combined_with_particles|○||
-
+|35extract_serial_noun|△|it takes too much time|
+|36extract_occurance_frequency|○||
+|37extract_top_10_frequenct_word|○||
+|38extract_frequenct_word|○||
+|39extract_plot_zipf|○||
 
 ### chapter5
 How to install mecab and Cabocha
