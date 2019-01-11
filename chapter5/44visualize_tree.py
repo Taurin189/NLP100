@@ -2,34 +2,20 @@
 import pydot
 import pydotplus
 from IPython.display import Image
+from chapter5.morph_utils import get_dot_node_from_chunk, get_chunk_list, get_chunk_dict
 
-G = pydot.Dot(graph_type='digraph',rankdir='LR',splines='false',dpi='250',pad='0',margin='0',fontsize='9.5')
-G.set_node_defaults(label='',shape='circle',penwidth='0.35')
-G.set_edge_defaults(arrowsize='0.5',penwidth='0.35')
+G = pydot.Dot(graph_type='digraph', rankdir='LR', splines='false', dpi='250', pad='0', margin='0', fontsize='9.5')
+G.set_node_defaults(shape='box')
+G.set_edge_defaults(arrowsize='0.5', penwidth='0.35')
 
-I = pydot.Subgraph('cluster_i',graph_type='digraph',label='Input',margin='0',fontcolor='red',penwidth='0')
-for i in range(1,4):
-    I.add_node(pydot.Node("i%d" % i, color='red'))
-
-H = pydot.Subgraph('cluster_h',graph_type='digraph',label='Hidden',margin='0',fontcolor='blue',penwidth='0')
-for i in range(1,5):
-    H.add_node(pydot.Node("h%d" % i, color='blue'))
-
-O = pydot.Subgraph('cluster_o',graph_type='digraph',label='Output',margin='0',fontcolor='darkgreen',penwidth='0')
-for i in range(1,3):
-    O.add_node(pydot.Node("o%d" % i, color='darkgreen'))
-
-G.add_subgraph(I)
-G.add_subgraph(H)
-G.add_subgraph(O)
-
-for i in range(1,4):
-    for j in range(1,5):
-        G.add_edge(pydot.Edge('i%d' % i, 'h%d' % j))
-
-for i in range(1,5):
-    for j in range(1,3):
-        G.add_edge(pydot.Edge('h%d' % i, 'o%d' % j))
+chunk_list = get_chunk_list("neko.txt.cabocha", 8)
+chunk_dict = get_chunk_dict("neko.txt.cabocha", 8)
+for chunk in chunk_list:
+    G.add_node(get_dot_node_from_chunk(chunk))
+    src = chunk.get_num()
+    dst = chunk.get_dst()
+    if dst in chunk_dict.keys():
+        G.add_edge(pydot.Edge(src, dst))
 
 G.write(path='pydot_ann.dot')
 graph = pydotplus.graphviz.graph_from_dot_file('pydot_ann.dot')

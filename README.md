@@ -71,5 +71,5 @@ https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
 |41make_chunk_list|○||
 |42display_dst_and_srcs|○||
 |43extract_verb_with_noun|○||
-|44visualize_tree|×|The error occurs when it run because of library.|
+|44visualize_tree|○||
 |45extract_verb_pattern|×|Not implement yet|

@@ -1,6 +1,7 @@
 # coding: utf-8
 from chapter5.Morph import Morph
 from chapter5.Chunk import Chunk
+import pydot
 
 
 def get_sentence_lines_by_num(file_name, num):
@@ -111,3 +112,10 @@ def get_chunk_text_by_chunk_dict_till_verb(text, chunk, chunk_dict):
     text = get_chunk_text_by_chunk_dict_till_verb(text, next_chunk, chunk_dict)
     return text
 
+
+def get_dot_node_from_chunk(chunk):
+    node_name = ""
+    for morph in chunk.get_morph_list():
+        node_name += morph.surface
+    print(node_name)
+    return pydot.Node(chunk.get_num(), label=node_name, color='red')
