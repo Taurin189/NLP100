@@ -1,5 +1,5 @@
 # coding: utf-8
-import pydot_ng as pydot
+import pydot
 import pydotplus
 from IPython.display import Image
 
