@@ -18,6 +18,13 @@ class Chunk:
     def get_morph_list(self):
         return self.morph_list
 
+    def get_morph_by_case(self, case):
+        morph_list_of_case = []
+        for morph in self.morph_list:
+            if morph.pos == case:
+                morph_list_of_case.append(morph)
+        return morph_list_of_case
+
     def append_morph_list(self, morph):
         self.morph_list.append(morph)
 

@@ -65,6 +65,12 @@ https://qiita.com/musaprg/items/9a572ad5c4e28f79d2ae
 エラー対応
 https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
 
+グラフ表示のために必要なライブラリのインストール
+
+    brew install graphviz
+    pip install graphviz
+    pip install pydotplus
+
 |problem name|is solved?|note|
 |:-----------|:------------:|:------------:|
 |40make_morph_list|○||
@@ -72,4 +78,4 @@ https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
 |42display_dst_and_srcs|○||
 |43extract_verb_with_noun|○||
 |44visualize_tree|○||
-|45extract_verb_pattern|×|Not implement yet|
+|45extract_verb_pattern|○||
