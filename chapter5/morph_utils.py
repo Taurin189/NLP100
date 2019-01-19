@@ -53,8 +53,9 @@ def get_chunk_list(file_name, num):
         elif len(word_analysis) > 8:
             tmp_morph = Morph(surface=word_analysis[0], base=word_analysis[7], pos=word_analysis[1],
                               pos1=word_analysis[2])
-            tmp_chunk.append_morph_list(tmp_morph)
-            tmp_chunk.append_morph_list_list(tmp_morph)
+            if tmp_chunk is not None:
+                tmp_chunk.append_morph_list(tmp_morph)
+                tmp_chunk.append_morph_list_list(tmp_morph)
     if tmp_chunk is not None:
         chunk_list.append(tmp_chunk)
     return chunk_list
