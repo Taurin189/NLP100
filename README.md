@@ -79,3 +79,15 @@ https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
 |43extract_verb_with_noun|○||
 |44visualize_tree|○||
 |45extract_verb_pattern|○||
+|46extract_verb_with_subject|○||
+|47extract_sa_verb_with_subject|||
+|48|||
+|49|||
+
+### chapter6
+
+|problem name|is solved?|note|
+|:-----------|:------------:|:------------:|
+|50split_sentence|○||
+|51extract_words|○||
+|52stemming|||
