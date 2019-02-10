@@ -87,7 +87,13 @@ https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
 ### chapter6
 in problem 52, I need to install stemming package
 
-    pip install nltk
+    pip install pycorenlp
+    curl https://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip -O https://nlp.stanford.edu/software/stanford-english-corenlp-2018-10-05-models.jar -O
+    unzip stanford-corenlp-full-2018-10-05.zip -d /usr/local/lib/
+    cd /usr/local/lib/stanford-corenlp-full-2018-10-05/
+    java -mx5g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 10000
+    
+
 
 About problem 52, I need to understand "語幹".
 
