@@ -13,3 +13,14 @@ def get_each_sentences(filename):
             for sentence in sentences:
                 sentence_list.append(sentence)
     return sentence_list
+
+
+def get_words(filename):
+    sentence_list = get_each_sentences(filename)
+    word_list = []
+    for sentence in sentence_list:
+        words = sentence.split()
+        for word in words:
+            word = re.sub(r'[(]?(\S+)[.,;:?!)]', r'\1', word)
+            word_list.append(word)
+    return word_list
