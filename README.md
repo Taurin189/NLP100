@@ -85,6 +85,13 @@ https://qiita.com/tmf16/items/046cdcc5aaa36a3e76d7
 |49|||
 
 ### chapter6
+in problem 52, I need to install stemming package
+
+    pip install nltk
+
+About problem 52, I need to understand "語幹".
+
+["語幹"とは何かの参考ページ](https://english.chicken168.com/gokan/)
 
 |problem name|is solved?|note|
 |:-----------|:------------:|:------------:|
