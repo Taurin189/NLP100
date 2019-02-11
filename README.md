@@ -103,4 +103,7 @@ About problem 52, I need to understand "語幹".
 |:-----------|:------------:|:------------:|
 |50split_sentence|○||
 |51extract_words|○||
-|52stemming|||
+|52stemming|○||
+|53tokenization|○||
+|54noun_tag|○||
+|55extract_person_names|△||
