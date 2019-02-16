@@ -98,6 +98,7 @@ in problem 52, I need to install stemming package
 About problem 52, I need to understand "語幹".
 
 ["語幹"とは何かの参考ページ](https://english.chicken168.com/gokan/)
+["Stanford CoreNLPをPythonから使う"](https://qiita.com/yubessy/items/1869ac2c66f4e76cd6c5)
 
 参照表現とは何か？代表参照表現とは何か？
 参照表現とは「赤いコップ」「右を向いた緑の椅子」のように
