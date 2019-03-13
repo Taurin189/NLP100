@@ -118,4 +118,5 @@ About problem 52, I need to understand "語幹".
 |52stemming|○||
 |53tokenization|○||
 |54noun_tag|○||
-|55extract_person_names|△||
+|55extract_person_names|△|I could list up NNP but the problem said that please list up person'name. I could't do it|
+|56analyze_mention|||
