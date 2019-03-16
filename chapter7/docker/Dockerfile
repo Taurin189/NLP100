@@ -1,4 +1,4 @@
 FROM mongo
 
 ADD artist.json .
-ADD insert_mongo.sh .
+ADD import_artist_data.sh /docker-entrypoint-initdb.d/
