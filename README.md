@@ -120,3 +120,12 @@ About problem 52, I need to understand "語幹".
 |54noun_tag|○||
 |55extract_person_names|△|I could list up NNP but the problem said that please list up person'name. I could't do it|
 |56analyze_mention|||
+
+### chapter7
+|problem name|is solved?|note|
+|:-----------|:------------:|:------------:|
+|60make_kvs_environment|||
+|61select_artist_workplace|||
+|64create_mongo_docker|○||
+|65get_artist_from_mongo|○||
+|66count_artist_in_japan_from_mongo|○||
