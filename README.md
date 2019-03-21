@@ -124,9 +124,10 @@ About problem 52, I need to understand "語幹".
 ### chapter7
 |problem name|is solved?|note|
 |:-----------|:------------:|:------------:|
-|60make_kvs_environment|△|anyway it works but whole data is not imported|
+|60make_kvs_environment|○||
 |61select_artist_workplace|○||
 |62loop_function_of_kvs|○||
+|63get_artist_tags_from_kvs|○||
 |64create_mongo_docker|○||
 |65get_artist_from_mongo|○||
 |66count_artist_in_japan_from_mongo|○||
