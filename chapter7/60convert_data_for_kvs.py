@@ -11,6 +11,10 @@ with open("docker/artist.json", "r") as f:
 
 with open("docker/redis/artist.txt", "w") as f:
     for k, v in artist_dict.items():
-        f.write("SET \'" + k + "\' \'" + v + "\'\n")
+        k = k.replace("'", "\\'")
+        v = v.replace("'", "\\'")
+        k = k.replace("\"", "\\")
+        v = v.replace("\"", "\\")
+        f.write("SET \"" + k + "\" \"" + v + "\"\n")
 
 print(artist_dict)

@@ -1,4 +1,13 @@
 #!/bin/bash
+count=0
 redis-server &
-sleep 20; (cat artist.txt; sleep 10) | redis-cli --pipe
+cat artist.txt | while read line
+do
+  echo $line | redis-cli --pipe
+  count=$(expr $count + 1)
+  if [ $count -ge 9 ] ; then
+    sleep 1
+    count=0
+  fi
+done
 while true; do sleep 10; done
