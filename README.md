@@ -131,3 +131,6 @@ About problem 52, I need to understand "語幹".
 |64create_mongo_docker|○||
 |65get_artist_from_mongo|○||
 |66count_artist_in_japan_from_mongo|○||
+|67get_multiple_document|○||
+|68sort_rate_who_has_dance_tag|○||
+|69|-|It is a little bit hard so skip it to do it later|
